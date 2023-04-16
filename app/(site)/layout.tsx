@@ -26,6 +26,11 @@ export default async function RootLayout({
           </div>
         </header>
         <main className='py-20'>{children}</main>
+        <footer className="fixed bottom-0 w-full bg-white rounded-lg m-4">
+          <div className="text-center">
+              <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://github.com/nashthecoder" class="hover:underline">NashTheCoder</a>.</span>
+          </div>
+        </footer>
       </body>
     </html>
   )

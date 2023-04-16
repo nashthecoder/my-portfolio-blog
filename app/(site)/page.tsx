@@ -12,7 +12,7 @@ export default async function Home() {
       <h1 className="text-7xl font-extrabold">Naijeria 
         <span className="bg-gradient-to-r from-blue-400 via-white-500 to-purple-600 bg-clip-text text-transparent"> Toweett</span> 
       </h1>
-      <p className="mt-3 text-xl text-grey-600 font-bold">Developer | Product Manager | QA Tester</p>
+      <p className="mt-3 text-xl text-blue-700 font-bold">Developer | Product Manager | QA Tester</p>
 
       <h2 className="mt-24 font-bold text-gray-700 text-3xl">My Dev Projects</h2>
 
