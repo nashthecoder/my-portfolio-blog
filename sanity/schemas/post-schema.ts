@@ -1,6 +1,6 @@
-const page = {
-    name: 'page',
-    title: 'Pages',
+const post = {
+    name: 'post',
+    title: 'Posts',
     type: 'document',
     fields: [
         {
@@ -37,4 +37,4 @@ const page = {
         }
     ]
 }
-export default page;
+export default post;
