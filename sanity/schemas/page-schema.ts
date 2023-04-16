@@ -1,7 +1,7 @@
 const page = {
     name: 'page',
     title: 'Pages',
-    type: 'documents',
+    type: 'document',
     fields: [
         {
             name: 'title',
