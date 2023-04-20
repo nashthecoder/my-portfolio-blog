@@ -14,7 +14,7 @@ export default async function Home() {
       </h1>
       <p className="mt-3 text-xl text-blue-700 font-bold">Developer | Product Manager | QA Tester</p>
 
-      <h2 className="mt-24 font-bold text-gray-700 text-3xl">My Dev Projects</h2>
+      <h2 className="mt-24 font-bold text-gray-500 text-3xl">My Dev Projects</h2>
 
       <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-8">{projects.map((project) => (
         <Link href={`/projects/${project.slug}`} key={project._id} className="border-2 border-gray-200 rounded-lg p-1 hover:scale-105 hover:border-blue-500 transition">
