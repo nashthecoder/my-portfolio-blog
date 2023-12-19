@@ -25,7 +25,7 @@ export default async function Page({ params }: Props) {
                     width={1920}
                     height={900}
                     className="mt-10 border-2 border-gray-700 object-cover"
-                    alt={page.image.alt || ""} />
+                    alt={page.image} />
             )}
 
             {page.content && (
