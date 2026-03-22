@@ -97,6 +97,13 @@ export default async function WorkPage() {
                     <a href={p.external_url || p.live_url || '#'} target="_blank" rel="noopener noreferrer" style={{ display:'block', width:'100%', height:'100%' }}>
                       <Image src={p.screenshot_url} alt={p.screenshot_label} fill style={{ objectFit:'cover' }} />
                     </a>
+                  ) : p.screenshot_label?.includes('DADA') ? (
+                    <div style={{ width:'100%', height:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'8px', padding:'1rem' }}>
+                      <div style={{ position:'relative', width:'120px', height:'120px' }}>
+                        <Image src="/images/dada.png" alt="DADA" fill style={{ objectFit:'contain' }} />
+                      </div>
+                      <span style={{ fontSize:'10px', color:'#C4A882', textAlign:'center', lineHeight:1.5 }}>{p.screenshot_label}</span>
+                    </div>
                   ) : (
                     <div style={{ width:'100%', height:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'8px', padding:'1rem' }}>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4A882" strokeWidth="1.2">
