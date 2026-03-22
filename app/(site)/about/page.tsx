@@ -82,7 +82,7 @@ export default function AboutPage() {
               Today I work as a Systems Architect and Fractional Product CTO, helping impact-sector
               organisations go from problem definition to shipped product — fast, sustainably, and
               without vendor lock-in. I specialise in the gap most consultants avoid: the messy middle
-              between "we have a great idea" and "we have a working product that users trust."
+              between &ldquo;we have a great idea&rdquo; and &ldquo;we have a working product that users trust.&rdquo;
             </p>
 
             <p style={{ fontSize: '14.5px', color: C.muted, lineHeight: 1.8 }}>
