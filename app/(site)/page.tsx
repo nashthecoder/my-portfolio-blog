@@ -30,7 +30,7 @@ const ORGS = ['World Bank','Girl Effect','NAILAB','DHCK Alliance','OpenFN','Afri
 const FALLBACK_PROJECTS = [
   {
     _id: '1', title: 'NairobiTalks', client: 'World Bank · Nairobi County Gov',
-    sector: 'govtech', summary: 'Civic platform co-designed with citizens and officials in 1.5 days. OpenFn-ready architecture.',
+    sector: 'govtech', summary: 'Civic platform co-designed with citizens and officials in 1.5 days. Filterable admin dashboard, swipe-based public interface.',
     impact_metric: '1.5 days to prototype', tags: ['DPI','Co-design','Rails','World Bank'],
     external_url: 'https://mamatechafrica.github.io/NairobiTalks-NCG/', live_url: null,
     screenshot_label: 'NairobiTalks dashboard — 1200×675px',
