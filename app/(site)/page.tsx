@@ -142,14 +142,8 @@ export default async function HomePage() {
 
           {/* Right — photo */}
           <div style={{ background: '#FBF4F1', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '2rem' }}>
-            <div style={{ width: '160px', height: '213px', borderRadius: '12px', background: C.stone200, border: `2px dashed #D6D3D0`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '1rem', textAlign: 'center' }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A8A29E" strokeWidth="1.2">
-                <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/>
-                <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6"/>
-              </svg>
-              <span style={{ fontSize: '10px', color: '#A8A29E', textTransform: 'uppercase', letterSpacing: '0.06em', lineHeight: 1.5 }}>
-                Portrait photo<br />600×800px min<br />/public/images/<br />naijeria-hero.jpg
-              </span>
+            <div style={{ position: 'relative', width: '180px', height: '240px', borderRadius: '12px', overflow: 'hidden' }}>
+              <Image src="/images/naijeria-hero.jpg" alt="Naijeria Toweett" fill style={{ objectFit: 'cover' }} />
             </div>
 
             {/* Floating tag chips */}
