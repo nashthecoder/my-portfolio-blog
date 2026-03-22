@@ -86,11 +86,11 @@ export default async function WorkPage() {
             const s = SECTOR[p.sector] ?? { bg:C.stone100, fg:C.muted, label:'Project' }
             return (
               <article key={p._id}
-                style={{ display:'grid', gridTemplateColumns: i % 2 === 0 ? '1fr 420px' : '420px 1fr', gap:'2.5rem', alignItems:'start',
+                style={{ display:'grid', gridTemplateColumns: i % 2 === 0 ? '1fr 420px' : '420px 1fr', gap:'2.5rem', alignItems:'stretch',
                   background:C.surface, borderRadius:'18px', border:`1px solid ${C.border}`, overflow:'hidden' }}>
 
                 {/* Screenshot */}
-                <div style={{ position:'relative', aspectRatio:'16/9', background:'#FBF4F1', order: i % 2 === 0 ? 2 : 1 }}>
+                <div style={{ position:'relative', minHeight:'300px', background:'#FBF4F1', order: i % 2 === 0 ? 2 : 1 }}>
                   {p.cover_image ? (
                     <Image src={p.cover_image} alt={p.title} fill style={{ objectFit:'cover' }} />
                   ) : p.screenshot_url ? (
