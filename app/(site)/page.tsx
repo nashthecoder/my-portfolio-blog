@@ -53,7 +53,7 @@ const FALLBACK_PROJECTS = [
     _id: '4', title: 'Njiapanda', client: 'TichLabs',
     sector: 'civic', summary: 'Product and UX lead — design, decisions, and direction across web and mobile.',
     impact_metric: null, tags: ['Product','UX lead','Mobile'],
-    external_url: 'https://tich-labs.github.io/njiapanda-case-study/', live_url: null,
+    external_url: 'https://tich-labs.github.io/njiapanda-case-study/', live_url: 'https://njiapanda-v2.web.app/',
     screenshot_label: 'Njiapanda screenshot — 1200×675px',
   },
   {

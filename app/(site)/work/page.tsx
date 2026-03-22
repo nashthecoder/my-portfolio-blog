@@ -43,7 +43,7 @@ const ALL_PROJECTS = [
   { _id:'4', title:'Njiapanda', client:'TichLabs', sector:'civic',
     summary:'Product and UX lead — design, decisions, and direction across web and mobile.',
     impact_metric:null, tags:['Product','UX lead','Mobile','TichLabs'],
-    external_url:'https://tich-labs.github.io/njiapanda-case-study/', live_url:null,
+    external_url:'https://tich-labs.github.io/njiapanda-case-study/', live_url:'https://njiapanda-v2.web.app/',
     delivers:['End-to-end product ownership','Mobile-first UX design','Full handover documentation'],
     screenshot_label:'Njiapanda screenshot — 1200×675px' },
   { _id:'5', title:'DADA', client:'Mama Tech / TichLabs', sector:'femtech',
