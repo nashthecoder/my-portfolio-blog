@@ -142,12 +142,8 @@ export default async function HomePage() {
 
           {/* Right — photo */}
           <div style={{ background: '#FBF4F1', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '2rem' }}>
-            <div style={{ position: 'relative', width: '180px', height: '240px', borderRadius: '12px', overflow: 'hidden' }}>
-              <Image src="/images/naijeria-hero.jpg" alt="Naijeria Toweett" fill style={{ objectFit: 'cover' }} />
-            </div>
-
             {/* Floating tag chips */}
-            <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'center', marginTop: 'auto' }}>
               {[
                 { label: 'World Bank 2025', bg: C.crimsonLight, fg: C.crimsonDark },
                 { label: 'OpenFn · DPI',    bg: C.burgundyLight, fg: C.burgundy },
