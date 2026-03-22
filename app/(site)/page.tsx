@@ -22,6 +22,8 @@ const C = {
   subtle:      '#A8A29E',
   stone100:    '#F5F4F2',
   stone200:    '#E8E5E2',
+  amber:       '#FAEEDA',
+  amberDark:   '#633806',
 }
 
 const ORGS = ['World Bank','Girl Effect','NAILAB','DHCK Alliance','OpenFN','Africa Media Trust','HURIDOCS']
@@ -162,6 +164,89 @@ export default async function HomePage() {
                 <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', margin: 0 }}>Systems Architect · Mama Tech Founder</p>
               </div>
               <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '11px' }}>Nairobi, KE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════════
+          ABOUT / BIO SECTION
+      ════════════════════════════════════════════════ */}
+      <section className="page-container py-12">
+        <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: '2.5rem', alignItems: 'start' }}>
+
+          {/* Left — photo card */}
+          <div style={{ background: C.surface, borderRadius: '18px', overflow: 'hidden', border: `1px solid ${C.border}` }}>
+            <div style={{ position: 'relative', aspectRatio: '3/4', borderRadius: '12px', overflow: 'hidden' }}>
+              <Image src="/images/naijeria-profile.jpg" alt="Naijeria Toweett" fill style={{ objectFit: 'cover' }} />
+            </div>
+            <div style={{ padding: '1.25rem' }}>
+              <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '1.25rem', color: C.charcoal, marginBottom: '3px' }}>Naijeria Toweett</p>
+              <p style={{ fontSize: '12px', fontWeight: '500', color: C.crimson, marginBottom: '1rem' }}>Founder, Mama Tech / TichLabs</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                {[
+                  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/naijeriatoweett/' },
+                  { label: 'GitHub',   href: 'https://github.com/nashthecoder' },
+                  { label: 'YouTube', href: 'https://youtube.com/' },
+                  { label: 'X',       href: 'https://x.com/NaijeriaToweett' },
+                ].map(({ label, href }) => (
+                  <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                    style={{ fontSize: '11px', padding: '3px 10px', borderRadius: '100px', border: `1px solid ${C.border}`, color: C.muted, textDecoration: 'none', display: 'inline-block' }}>
+                    {label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right — bio */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.4rem', paddingTop: '0.5rem' }}>
+            {/* Pull quote */}
+            <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '1.5rem', color: C.charcoal, lineHeight: 1.3, letterSpacing: '-0.015em' }}>
+              I&apos;ve spent 20+ years at the intersection of technology, communications,
+              and <em style={{ color: C.crimson, fontStyle: 'italic' }}>social impact.</em>
+            </p>
+
+            {/* Body */}
+            <p style={{ fontSize: '14.5px', color: C.muted, lineHeight: 1.8 }}>
+              Today I work as a Systems Architect and Fractional Product CTO, helping impact-sector
+              organisations go from problem definition to shipped product — fast, sustainably, and
+              without vendor lock-in. I specialise in the gap most consultants avoid: the messy middle
+              between &ldquo;we have a great idea&rdquo; and &ldquo;we have a working product that users trust.&rdquo;
+            </p>
+
+            <p style={{ fontSize: '14.5px', color: C.muted, lineHeight: 1.8 }}>
+              I&apos;m the founder of <strong style={{ fontWeight: '500', color: C.charcoal }}>Mama Tech / TichLabs</strong> — a feminist tech studio
+              building DADA, a menopause companion designed specifically for African women, and
+              Mama Tech Teaches, a learning community where women build from day one.
+            </p>
+
+            {/* Stats */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '10px' }}>
+              {[
+                { n: '20+', l: 'Years in impact sector' },
+                { n: '8+',  l: 'Countries reached' },
+                { n: 'DPG', l: 'Open source advocate' },
+              ].map(({ n, l }) => (
+                <div key={n} style={{ background: C.stone100, borderRadius: '12px', padding: '1rem' }}>
+                  <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '2rem', color: C.crimson, lineHeight: 1, marginBottom: '4px' }}>{n}</p>
+                  <p style={{ fontSize: '11px', color: C.subtle, lineHeight: 1.4 }}>{l}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Credential badges */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '7px' }}>
+              {[
+                { text: 'World Bank Civic Residency 2025', bg: C.crimsonLight, fg: C.crimsonDark },
+                { text: 'Women in GovTech',               bg: C.burgundyLight, fg: C.burgundy },
+                { text: 'Friendly.rb 2023 Speaker',        bg: C.amber,         fg: C.amberDark },
+                { text: 'GitHub Tech for Social Good',     bg: C.crimsonLight, fg: C.crimsonDark },
+              ].map(({ text, bg, fg }) => (
+                <span key={text} style={{ fontSize: '11px', fontWeight: '500', padding: '5px 13px', borderRadius: '100px', background: bg, color: fg }}>
+                  {text}
+                </span>
+              ))}
             </div>
           </div>
         </div>
