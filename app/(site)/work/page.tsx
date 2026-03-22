@@ -99,7 +99,7 @@ export default async function WorkPage() {
                     </a>
                   ) : p.screenshot_label?.includes('DADA') ? (
                     <div style={{ width:'100%', height:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'8px', padding:'1rem' }}>
-                      <div style={{ position:'relative', width:'120px', height:'120px' }}>
+                      <div style={{ position:'relative', width:'200px', height:'200px' }}>
                         <Image src="/images/dada.png" alt="DADA" fill style={{ objectFit:'contain' }} />
                       </div>
                       <span style={{ fontSize:'10px', color:'#C4A882', textAlign:'center', lineHeight:1.5 }}>{p.screenshot_label}</span>
