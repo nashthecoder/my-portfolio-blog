@@ -1,5 +1,7 @@
 // app/(site)/about/page.tsx  — ABOUT PAGE
 
+import Image from 'next/image'
+
 const C = {
   crimson:      '#C0392B',
   crimsonLight: '#FAEAE8',
@@ -37,15 +39,9 @@ export default function AboutPage() {
           {/* Left — photo card */}
           <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: '18px', overflow: 'hidden' }}>
 
-            {/* Photo placeholder */}
-            <div style={{ position: 'relative', aspectRatio: '3/4', background: '#FBF4F1', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '8px', border: `2px dashed #EDE5E1` }}>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C4A882" strokeWidth="1.2">
-                <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/>
-                <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6"/>
-              </svg>
-              <span style={{ fontSize: '10px', color: '#C4A882', textTransform: 'uppercase', letterSpacing: '0.07em', textAlign: 'center', lineHeight: 1.6 }}>
-                Headshot<br />400×500px min<br />/public/images/<br />naijeria-profile.jpg
-              </span>
+            {/* Photo */}
+            <div style={{ position: 'relative', aspectRatio: '3/4', borderRadius: '12px', overflow: 'hidden' }}>
+              <Image src="/images/naijeria-profile.jpg" alt="Naijeria Toweett" fill style={{ objectFit: 'cover' }} />
             </div>
 
             {/* Meta */}
