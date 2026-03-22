@@ -25,31 +25,31 @@ const ALL_PROJECTS = [
   { _id:'1', title:'NairobiTalks', client:'World Bank · Nairobi County Gov', sector:'govtech',
     summary:'Civic tech platform co-designed with citizens and officials in 1.5 days. Filterable admin dashboard, swipe-based public interface, AI chatbot for planning literacy. MIT licensed.',
     impact_metric:'1.5 days to prototype', tags:['DPI','Co-design','Rails','World Bank'],
-    external_url:'https://mamatechafrica.github.io/NairobiTalks-NCG/', live_url:null,
+    external_url:'https://mamatechafrica.github.io/NairobiTalks-NCG/', live_url:null, iframe_url:'https://mamatechafrica.github.io/NairobiTalks-NCG/',
     delivers:['1.5 days from problem to prototype','Co-design with 4 stakeholder groups','Non-technical handover documentation','MIT open source'],
     screenshot_label:'NairobiTalks dashboard — 1200×675px' },
   { _id:'2', title:'AskRafikey', client:'Digital Health Coalition of Kenya', sector:'healthtech',
     summary:"Kenya's first AI-driven SRHR chatbot. 18 verified topic areas, GPS service finder, full admin CMS for non-technical coalition staff. 5 rounds of co-design and usability testing.",
     impact_metric:'5 rounds · 20 testers', tags:['AI','SRHR','DPI','Open source','Coalition CMS'],
-    external_url:'https://rafikey-portfolio.lovable.app/', live_url:'https://askrafikey.com/',
+    external_url:'https://rafikey-portfolio.lovable.app/', live_url:'https://askrafikey.com/', iframe_url:'https://rafikey-portfolio.lovable.app/',
     delivers:['5 co-design rounds with 20 testers','Non-technical admin CMS','7-organisation coalition delivery','Zero vendor lock-in','GPS-based service finder'],
     screenshot_label:'AskRafikey chat interface — 1200×675px' },
   { _id:'3', title:'Mama Tech Teaches', client:'Mama Tech', sector:'education',
     summary:'Build. Belong. Become. Learning community for women stepping into tech as builders. Translates career experience into tech foundation. AI as co-builder. Virtual + physical cohorts.',
     impact_metric:'Build from day one', tags:['EdTech','Women in Tech','AI learning','Mama Tech'],
-    external_url:'https://mt-teaches.lovable.app/', live_url:'https://mt-teaches.lovable.app/',
+    external_url:'https://mt-teaches.lovable.app/', live_url:'https://mt-teaches.lovable.app/', iframe_url:'https://mt-teaches.lovable.app/',
     delivers:['Women career-transitioners into tech','AI-assisted learning at every level','Build from week one','Africa + diaspora community'],
     screenshot_label:'Mama Tech Teaches screenshot — 1200×675px' },
   { _id:'4', title:'Njiapanda', client:'TichLabs', sector:'civic',
     summary:'Product and UX lead — design, decisions, and direction across web and mobile.',
     impact_metric:null, tags:['Product','UX lead','Mobile','TichLabs'],
-    external_url:'https://tich-labs.github.io/njiapanda-case-study/', live_url:'https://njiapanda-v2.web.app/',
+    external_url:'https://tich-labs.github.io/njiapanda-case-study/', live_url:'https://njiapanda-v2.web.app/', iframe_url:'https://njiapanda-v2.web.app/',
     delivers:['End-to-end product ownership','Mobile-first UX design','Full handover documentation'],
     screenshot_label:'Njiapanda screenshot — 1200×675px' },
   { _id:'5', title:'DADA', client:'Mama Tech / TichLabs', sector:'femtech',
     summary:'Menopause companion designed specifically for African women. Culturally grounded, AI-powered, human-centred. Currently in design and build phase.',
     impact_metric:'In development', tags:['FemTech','AI companion',"Women's health"],
-    external_url:null, live_url:null,
+    external_url:null, live_url:null, iframe_url:null,
     delivers:['First-of-its-kind for African women','Culturally grounded design','AI-powered companion'],
     screenshot_label:'DADA brand image or wireframe — 1200×675px' },
 ]
@@ -89,10 +89,18 @@ export default async function WorkPage() {
                 style={{ display:'grid', gridTemplateColumns: i % 2 === 0 ? '1fr 420px' : '420px 1fr', gap:'2.5rem', alignItems:'start',
                   background:C.surface, borderRadius:'18px', border:`1px solid ${C.border}`, overflow:'hidden' }}>
 
-                {/* Screenshot */}
+                {/* Screenshot / iframe */}
                 <div style={{ position:'relative', aspectRatio:'16/9', background:'#FBF4F1', order: i % 2 === 0 ? 2 : 1 }}>
                   {p.cover_image ? (
                     <Image src={p.cover_image} alt={p.title} fill style={{ objectFit:'cover' }} />
+                  ) : p.iframe_url ? (
+                    <iframe 
+                      src={p.iframe_url} 
+                      title={p.title}
+                      style={{ width:'100%', height:'100%', border:'none' }}
+                      loading="lazy"
+                      sandbox="allow-scripts allow-same-origin allow-popups"
+                    />
                   ) : (
                     <div style={{ width:'100%', height:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'8px', padding:'1rem' }}>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4A882" strokeWidth="1.2">
