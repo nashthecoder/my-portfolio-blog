@@ -86,11 +86,10 @@ export default async function WorkPage() {
             const s = SECTOR[p.sector] ?? { bg:C.stone100, fg:C.muted, label:'Project' }
             return (
               <article key={p._id}
-                style={{ display:'grid', gridTemplateColumns: i % 2 === 0 ? '1fr 420px' : '420px 1fr', gap:'2.5rem', alignItems:'start',
-                  background:C.surface, borderRadius:'18px', border:`1px solid ${C.border}`, overflow:'hidden' }}>
+                className={`work-grid${i % 2 !== 0 ? ' work-grid--reverse' : ''}`}>
 
                 {/* Screenshot */}
-                <div style={{ position:'relative', aspectRatio:'16/9', background:'#FBF4F1', order: i % 2 === 0 ? 2 : 1 }}>
+                <div className="screenshot" style={{ position:'relative', aspectRatio:'16/9', background:'#FBF4F1' }}>
                   {p.cover_image ? (
                     <Image src={p.cover_image} alt={p.title} fill style={{ objectFit:'cover' }} />
                   ) : (
@@ -107,7 +106,7 @@ export default async function WorkPage() {
                 </div>
 
                 {/* Content */}
-                <div style={{ padding:'2rem', display:'flex', flexDirection:'column', gap:'1rem', order: i % 2 === 0 ? 1 : 2 }}>
+                <div className="content" style={{ padding:'2rem', display:'flex', flexDirection:'column', gap:'1rem' }}>
                   {p.client && <p style={{ fontSize:'12px', color:C.subtle, margin:0 }}>{p.client}</p>}
                   <h2 style={{ fontFamily:'"DM Serif Display",Georgia,serif', fontSize:'1.75rem', color:C.charcoal, lineHeight:1.15, margin:0 }}>{p.title}</h2>
                   <p style={{ fontSize:'14px', color:C.muted, lineHeight:1.75, margin:0 }}>{p.summary}</p>

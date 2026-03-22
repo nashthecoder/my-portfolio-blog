@@ -84,14 +84,7 @@ export default async function HomePage() {
           HERO
       ════════════════════════════════════════════════ */}
       <section className="page-container pt-10 pb-6">
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 360px',
-          minHeight: '460px',
-          borderRadius: '18px',
-          overflow: 'hidden',
-          border: `1px solid ${C.border}`,
-        }}>
+        <div className="hero-grid">
           {/* Left — text */}
           <div style={{ background: C.surface, padding: '3rem 2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.1rem' }}>
 
@@ -203,7 +196,7 @@ export default async function HomePage() {
         <p style={{ fontSize: '14px', color: C.muted, marginBottom: '2rem', lineHeight: 1.65 }}>From prototype in 1.5 days to multi-country platform deployments.</p>
 
         {/* Project grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: '14px' }}>
+        <div className="projects-grid">
           {projects.slice(0,3).map((p: any) => {
             const s = SECTOR[p.sector] ?? { bg: C.stone100, fg: C.muted, label: 'Project' }
             return (
