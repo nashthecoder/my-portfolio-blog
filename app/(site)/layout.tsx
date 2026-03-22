@@ -30,8 +30,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
           {/* Logo */}
           <Link href="/" className="nav-logo" aria-label="Naijeria Toweett home">
             <span className="logo-primary">Naijeria Toweett</span>
-            <span className="logo-divider">·</span>
-            <span className="logo-secondary">Mama Tech</span>
           </Link>
 
           {/* Nav links */}
@@ -93,7 +91,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
           <div className="footer-col">
             <p className="footer-col-label">About</p>
             <ul>
-              <li><Link href="/about" className="footer-link">About me</Link></li>
               <li><Link href="/cv" className="footer-link">CV / Résumé</Link></li>
               <li><Link href="/blog" className="footer-link">Writing</Link></li>
             </ul>

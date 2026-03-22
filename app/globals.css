@@ -58,7 +58,7 @@
   --font-body:    'DM Sans', system-ui, sans-serif;
 
   /* Spacing */
-  --max-w: 68rem;       /* 1088px — comfortable reading + sidebar room */
+  --max-w: 111rem;       /* 1776px — comfortable reading + sidebar room */
   --max-w-prose: 42rem; /* 672px  — blog posts, about */
   --nav-h: 60px;
 
@@ -104,7 +104,7 @@ button { font-family: inherit; cursor: pointer; }
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: var(--r-md);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   z-index: 9999;
   transition: top 0.2s var(--ease);
@@ -157,16 +157,16 @@ button { font-family: inherit; cursor: pointer; }
 }
 .logo-primary {
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 22px;
   color: var(--color-text);
   letter-spacing: -0.01em;
 }
 .logo-divider {
   color: var(--color-text-subtle);
-  font-size: 13px;
+  font-size: 17px;
 }
 .logo-secondary {
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 400;
   color: var(--color-accent);
   letter-spacing: 0.01em;
@@ -180,7 +180,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .nav-link {
-  font-size: 13.5px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--color-text-muted);
   padding: 0.4rem 0.75rem;
@@ -200,7 +200,7 @@ button { font-family: inherit; cursor: pointer; }
 
 /* CTA pill */
 .nav-cta {
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 500;
   color: var(--color-surface);
   background: var(--color-accent);
@@ -242,9 +242,30 @@ button { font-family: inherit; cursor: pointer; }
 }
 .fw-primary {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 23px;
   color: #fff;
   letter-spacing: -0.01em;
+}
+.fw-sep {
+  color: var(--stone-600);
+  font-size: 18px;
+}
+.fw-venture {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--crimson-100);
+  transition: color 0.15s;
+}
+
+.footer-tagline {
+  font-size: 16px;
+  color: var(--stone-400);
+  line-height: 1.5;
+  max-width: 22ch;
+}
+.footer-location {
+  font-size: 16px;
+  color: var(--stone-600);
 }
 .fw-sep {
   color: var(--stone-600);
@@ -277,7 +298,7 @@ button { font-family: inherit; cursor: pointer; }
 .footer-col { display: flex; flex-direction: column; gap: 0.75rem; }
 
 .footer-col-label {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -287,7 +308,7 @@ button { font-family: inherit; cursor: pointer; }
 .footer-col ul { display: flex; flex-direction: column; gap: 0.5rem; }
 
 .footer-link {
-  font-size: 13px;
+  font-size: 17px;
   color: var(--stone-400);
   transition: color 0.15s var(--ease);
 }
@@ -308,7 +329,7 @@ button { font-family: inherit; cursor: pointer; }
   flex-wrap: wrap;
 }
 .footer-copy, .footer-built {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--stone-600);
 }
 .footer-link-subtle {
@@ -356,7 +377,7 @@ p { color: var(--color-text-muted); max-width: 60ch; }
   align-items: center;
   gap: 0.4rem;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   padding: 0.6rem 1.25rem;
   border-radius: 100px;
@@ -403,7 +424,7 @@ p { color: var(--color-text-muted); max-width: 60ch; }
 .pill {
   display: inline-flex;
   align-items: center;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   padding: 3px 10px;
   border-radius: 100px;
@@ -423,14 +444,14 @@ p { color: var(--color-text-muted); max-width: 60ch; }
   border-bottom: 1px solid var(--color-border);
 }
 .logo-strip__label {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
 }
 .logo-strip__badge {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   padding: 4px 12px;
   border-radius: var(--r-sm);
@@ -444,7 +465,7 @@ p { color: var(--color-text-muted); max-width: 60ch; }
 
 /* ── Prose (blog posts, about page) ─────────────────────────────────────── */
 .prose {
-  font-size: 16.5px;
+  font-size: 21px;
   line-height: 1.8;
   color: var(--color-text-muted);
 }

@@ -19,16 +19,16 @@ export default async function BlogPage() {
 
   return (
     <div style={{ background: C.warmBg, minHeight: '100vh' }}>
-      <div style={{ maxWidth:'42rem', margin:'0 auto', padding:'3rem 1.5rem' }}>
+      <div className="page-container py-12">
 
-        <p style={{ fontSize:'11px', fontWeight:'500', color:C.crimson, textTransform:'uppercase', letterSpacing:'0.09em', marginBottom:'0.4rem' }}>Writing</p>
+        <p style={{ fontSize:'18px', fontWeight:'500', color:C.crimson, textTransform:'uppercase', letterSpacing:'0.09em', marginBottom:'0.4rem' }}>Writing</p>
         <h1 style={{ fontFamily:'"DM Serif Display",Georgia,serif', fontSize:'2.5rem', color:C.charcoal, letterSpacing:'-0.025em', marginBottom:'0.4rem' }}>What I&apos;m thinking about</h1>
-        <p style={{ fontSize:'15px', color:C.muted, marginBottom:'2.5rem', lineHeight:1.7 }}>
+        <p style={{ fontSize:'20px', color:C.muted, marginBottom:'2.5rem', lineHeight:1.7 }}>
           GovTech · DPI · FemTech · AI in the impact sector · Product · Open source
         </p>
 
         {posts.length === 0 ? (
-          <p style={{ fontSize:'14px', color:C.subtle }}>First post coming soon.</p>
+          <p style={{ fontSize:'18px', color:C.subtle }}>First post coming soon.</p>
         ) : (
           <div>
             {posts.map(post => (
@@ -38,16 +38,16 @@ export default async function BlogPage() {
                 <div style={{ padding:'1.75rem 0' }}>
                   <div style={{ display:'flex', alignItems:'center', gap:'10px', marginBottom:'8px', flexWrap:'wrap' }}>
                     {post.publishedAt && (
-                      <span style={{ fontSize:'12px', color:C.subtle }}>
+                      <span style={{ fontSize:'16px', color:C.subtle }}>
                         {new Date(post.publishedAt).toLocaleDateString('en-GB',{ day:'numeric', month:'long', year:'numeric' })}
                       </span>
                     )}
                     {post.tags?.slice(0,2).map((t: string) => (
-                      <span key={t} style={{ fontSize:'11px', fontWeight:'500', padding:'2px 9px', borderRadius:'100px', background:C.crimsonLight, color:C.crimsonDark }}>{t}</span>
+                      <span key={t} style={{ fontSize:'18px', fontWeight:'500', padding:'2px 9px', borderRadius:'100px', background:C.crimsonLight, color:C.crimsonDark }}>{t}</span>
                     ))}
                   </div>
-                  <h2 style={{ fontFamily:'"DM Serif Display",Georgia,serif', fontSize:'1.35rem', color:C.charcoal, marginBottom:'6px', lineHeight:1.25 }}>{post.title}</h2>
-                  {post.excerpt && <p style={{ fontSize:'14px', color:C.muted, lineHeight:1.65, margin:0 }}>{post.excerpt}</p>}
+                  <h2 style={{ fontFamily:'"DM Serif Display",Georgia,serif', fontSize:'1.75rem', color:C.charcoal, marginBottom:'6px', lineHeight:1.25 }}>{post.title}</h2>
+                  {post.excerpt && <p style={{ fontSize:'18px', color:C.muted, lineHeight:1.65, margin:0 }}>{post.excerpt}</p>}
                 </div>
               </a>
             ))}

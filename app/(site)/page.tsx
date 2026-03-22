@@ -26,13 +26,13 @@ const C = {
   amberDark:   '#633806',
 }
 
-const ORGS = ['World Bank','Girl Effect','NAILAB','DHCK Alliance','OpenFN','Africa Media Trust','HURIDOCS']
+const ORGS = ['World Bank','Girl Effect','NAILAB','DHCK Alliance','HURIDOCS']
 
 // Fallback projects if Sanity not yet populated
 const FALLBACK_PROJECTS = [
   {
     _id: '1', title: 'NairobiTalks', client: 'World Bank · Nairobi County Gov',
-    sector: 'govtech', summary: 'Civic platform co-designed with citizens and officials in 1.5 days. Filterable admin dashboard, swipe-based public interface.',
+    sector: 'govtech', summary: 'Co-designed with citizens, officials, and civil society in a 1.5-day World Bank sprint.',
     impact_metric: '1.5 days to prototype', tags: ['DPI','Co-design','Rails','World Bank'],
     external_url: 'https://mamatechafrica.github.io/NairobiTalks-NCG/', live_url: null,
     screenshot_label: 'NairobiTalks dashboard — 1200×675px',
@@ -50,6 +50,8 @@ const FALLBACK_PROJECTS = [
     impact_metric: 'Build from day one', tags: ['EdTech','Women in Tech','AI learning'],
     external_url: 'https://mt-teaches.lovable.app/', live_url: 'https://mt-teaches.lovable.app/',
     screenshot_label: 'Mama Tech Teaches screenshot — 1200×675px',
+    cta_label: 'Join the community →',
+    cta_url: 'https://mt-teaches.lovable.app/',
   },
   {
     _id: '4', title: 'Njiapanda', client: 'TichLabs',
@@ -85,87 +87,42 @@ export default async function HomePage() {
       {/* ════════════════════════════════════════════════
           HERO
       ════════════════════════════════════════════════ */}
-      <section className="page-container pt-10 pb-6">
+      <section className="page-container pt-10 pb-12">
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 360px',
-          minHeight: '460px',
+          background: C.surface,
           borderRadius: '18px',
           overflow: 'hidden',
           border: `1px solid ${C.border}`,
+          padding: '3rem 2.5rem',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          gap: '1.1rem',
+          marginBottom: '2rem',
         }}>
-          {/* Left — text */}
-          <div style={{ background: C.surface, padding: '3rem 2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.1rem' }}>
-
-            {/* Eyebrow pills */}
-            <div style={{ display: 'flex', gap: '7px', flexWrap: 'wrap' }}>
-              {[
-                { label: 'Systems architect',      bg: C.crimsonLight, fg: C.crimsonDark },
-                { label: 'Fractional product CTO', bg: C.burgundyLight, fg: C.burgundy },
-                { label: 'FemTech founder',         bg: C.stone100,     fg: C.muted },
-              ].map(({ label, bg, fg }) => (
-                <span key={label} style={{ fontSize: '11px', fontWeight: '500', padding: '3px 11px', borderRadius: '100px', background: bg, color: fg }}>
-                  {label}
-                </span>
-              ))}
-            </div>
-
-            {/* Headline */}
-            <h1 style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: 'clamp(1.9rem,4vw,2.6rem)', lineHeight: 1.1, letterSpacing: '-0.025em', color: C.charcoal }}>
-              Building Africa&apos;s<br />
-              <span style={{ color: C.crimson }}>digital infrastructure</span><br />
-              for impact.
-            </h1>
-
-            {/* Subtitle */}
-            <p style={{ fontSize: '15px', color: C.muted, lineHeight: 1.75, maxWidth: '40ch' }}>
-              I architect and ship open-source, interoperable platforms — from DPG-aligned government
-              systems to feminist healthtech. Founder of Mama Tech&nbsp;/&nbsp;TichLabs. Creator of DADA.
-            </p>
-
-            {/* CTAs */}
-            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-              <a href="https://quickjobs.naijeriatoweett.com/" target="_blank" rel="noopener noreferrer"
-                style={{ fontSize: '13px', fontWeight: '500', padding: '0.55rem 1.3rem', borderRadius: '100px', background: C.crimson, color: '#fff', display: 'inline-block', textDecoration: 'none' }}>
-                Brief me on a project →
-              </a>
-              <a href="/cv"
-                style={{ fontSize: '13px', padding: '0.55rem 1.25rem', borderRadius: '100px', background: 'transparent', color: C.charcoal, border: `1px solid ${C.border}`, display: 'inline-block', textDecoration: 'none' }}>
-                Download CV
-              </a>
-            </div>
-
-            {/* Availability */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '12px', fontWeight: '500', color: C.crimson }}>
-              <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: C.crimsonMid, display: 'inline-block', animation: 'pulse 2s ease-in-out infinite' }} />
-              Available for consulting · Nairobi, Kenya
-            </div>
+          {/* Eyebrow pills */}
+          <div style={{ display: 'flex', gap: '7px', flexWrap: 'wrap' }}>
+            {[
+              { label: 'Systems architect',      bg: C.crimsonLight, fg: C.crimsonDark },
+              { label: 'Fractional product CTO', bg: C.burgundyLight, fg: C.burgundy },
+              { label: 'FemTech founder',         bg: C.stone100,     fg: C.muted },
+            ].map(({ label, bg, fg }) => (
+              <span key={label} style={{ fontSize: '18px', fontWeight: '500', padding: '3px 11px', borderRadius: '100px', background: bg, color: fg }}>
+                {label}
+              </span>
+            ))}
           </div>
 
-          {/* Right — photo */}
-          <div style={{ background: '#FBF4F1', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', padding: '2rem' }}>
-            {/* Floating tag chips */}
-            <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'center', marginTop: 'auto' }}>
-              {[
-                { label: 'World Bank 2025', bg: C.crimsonLight, fg: C.crimsonDark },
-                { label: 'OpenFn · DPI',    bg: C.burgundyLight, fg: C.burgundy },
-                { label: 'DADA · FemTech',  bg: C.crimsonLight, fg: C.crimsonDark },
-              ].map(({ label, bg, fg }) => (
-                <span key={label} style={{ fontSize: '10px', fontWeight: '500', padding: '3px 10px', borderRadius: '100px', background: bg, color: fg }}>
-                  {label}
-                </span>
-              ))}
-            </div>
+          {/* Headline */}
+          <h1 style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: 'clamp(1.56rem,3.9vw,3.38rem)', lineHeight: 1.1, letterSpacing: '-0.025em', color: C.charcoal }}>
+            Building Africa&apos;s <span style={{ color: C.crimson }}>digital infrastructure</span> for impact.
+          </h1>
 
-            {/* Name overlay */}
-            <div style={{ position: 'absolute', bottom: '1rem', left: '1rem', right: '1rem', background: 'rgba(30,30,46,0.7)', backdropFilter: 'blur(6px)', borderRadius: '10px', padding: '0.6rem 1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <div>
-                <p style={{ color: '#fff', fontSize: '13px', fontWeight: '500', margin: 0 }}>Naijeria Toweett</p>
-                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', margin: 0 }}>Systems Architect · Mama Tech Founder</p>
-              </div>
-              <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '11px' }}>Nairobi, KE</span>
-            </div>
-          </div>
+          {/* CTA */}
+          <a href="/cv"
+            style={{ fontSize: '17px', padding: '0.55rem 1.25rem', borderRadius: '100px', background: 'transparent', color: C.charcoal, border: `1px solid ${C.border}`, display: 'inline-block', textDecoration: 'none', width: 'fit-content' }}>
+            Download CV
+          </a>
         </div>
       </section>
 
@@ -178,11 +135,11 @@ export default async function HomePage() {
           {/* Left — photo card */}
           <div style={{ background: C.surface, borderRadius: '18px', overflow: 'hidden', border: `1px solid ${C.border}` }}>
             <div style={{ position: 'relative', aspectRatio: '3/4', borderRadius: '12px', overflow: 'hidden' }}>
-              <Image src="/images/naijeria-profile.jpg" alt="Naijeria Toweett" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/naijeria-profile.jpg" alt="Naijeria Toweett" fill sizes="280px" priority style={{ objectFit: 'cover' }} />
             </div>
             <div style={{ padding: '1.25rem' }}>
-              <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '1.25rem', color: C.charcoal, marginBottom: '3px' }}>Naijeria Toweett</p>
-              <p style={{ fontSize: '12px', fontWeight: '500', color: C.crimson, marginBottom: '1rem' }}>Founder, Mama Tech / TichLabs</p>
+              <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '1.6rem', color: C.charcoal, marginBottom: '3px' }}>Naijeria Toweett</p>
+              <p style={{ fontSize: '16px', fontWeight: '500', color: C.crimson, marginBottom: '1rem' }}>Founder, Mama Tech / TichLabs</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                 {[
                   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/naijeriatoweett/' },
@@ -191,7 +148,7 @@ export default async function HomePage() {
                   { label: 'X',       href: 'https://x.com/NaijeriaToweett' },
                 ].map(({ label, href }) => (
                   <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                    style={{ fontSize: '11px', padding: '3px 10px', borderRadius: '100px', border: `1px solid ${C.border}`, color: C.muted, textDecoration: 'none', display: 'inline-block' }}>
+                    style={{ fontSize: '18px', padding: '3px 10px', borderRadius: '100px', border: `1px solid ${C.border}`, color: C.muted, textDecoration: 'none', display: 'inline-block' }}>
                     {label}
                   </a>
                 ))}
@@ -202,22 +159,27 @@ export default async function HomePage() {
           {/* Right — bio */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.4rem', paddingTop: '0.5rem' }}>
             {/* Pull quote */}
-            <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '1.5rem', color: C.charcoal, lineHeight: 1.3, letterSpacing: '-0.015em' }}>
+            <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '2.6rem', color: C.charcoal, lineHeight: 1.3, letterSpacing: '-0.015em' }}>
               I&apos;ve spent 20+ years at the intersection of technology, communications,
               and <em style={{ color: C.crimson, fontStyle: 'italic' }}>social impact.</em>
             </p>
 
             {/* Body */}
-            <p style={{ fontSize: '14.5px', color: C.muted, lineHeight: 1.8 }}>
+            <p style={{ fontSize: '19px', color: C.muted, lineHeight: 1.8 }}>
               Today I work as a Systems Architect and Fractional Product CTO, helping impact-sector
               organisations go from problem definition to shipped product — fast, sustainably, and
-              without vendor lock-in. I specialise in the gap most consultants avoid: the messy middle
+              without vendor lock-in.
+            </p>
+
+            <p style={{ fontSize: '19px', color: C.muted, lineHeight: 1.8 }}>
+              I architect and ship open-source, interoperable platforms: from DPG-aligned government
+              systems to feminist healthtech. I specialise in the messy middle most consultants avoid —
               between &ldquo;we have a great idea&rdquo; and &ldquo;we have a working product that users trust.&rdquo;
             </p>
 
-            <p style={{ fontSize: '14.5px', color: C.muted, lineHeight: 1.8 }}>
+            <p style={{ fontSize: '19px', color: C.muted, lineHeight: 1.8 }}>
               I&apos;m the founder of <strong style={{ fontWeight: '500', color: C.charcoal }}>Mama Tech / TichLabs</strong> — a feminist tech studio
-              building DADA, a menopause companion designed specifically for African women, and
+              building DADA, a menopause companion for African women, and
               Mama Tech Teaches, a learning community where women build from day one.
             </p>
 
@@ -229,8 +191,8 @@ export default async function HomePage() {
                 { n: 'DPG', l: 'Open source advocate' },
               ].map(({ n, l }) => (
                 <div key={n} style={{ background: C.stone100, borderRadius: '12px', padding: '1rem' }}>
-                  <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '2rem', color: C.crimson, lineHeight: 1, marginBottom: '4px' }}>{n}</p>
-                  <p style={{ fontSize: '11px', color: C.subtle, lineHeight: 1.4 }}>{l}</p>
+                  <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '2.6rem', color: C.crimson, lineHeight: 1, marginBottom: '4px' }}>{n}</p>
+                  <p style={{ fontSize: '18px', color: C.subtle, lineHeight: 1.4 }}>{l}</p>
                 </div>
               ))}
             </div>
@@ -243,124 +205,139 @@ export default async function HomePage() {
                 { text: 'Friendly.rb 2023 Speaker',        bg: C.amber,         fg: C.amberDark },
                 { text: 'GitHub Tech for Social Good',     bg: C.crimsonLight, fg: C.crimsonDark },
               ].map(({ text, bg, fg }) => (
-                <span key={text} style={{ fontSize: '11px', fontWeight: '500', padding: '5px 13px', borderRadius: '100px', background: bg, color: fg }}>
+                <span key={text} style={{ fontSize: '18px', fontWeight: '500', padding: '5px 13px', borderRadius: '100px', background: bg, color: fg }}>
                   {text}
                 </span>
               ))}
             </div>
           </div>
         </div>
-      </section>
 
-      {/* ════════════════════════════════════════════════
-          LOGO STRIP
-      ════════════════════════════════════════════════ */}
-      <section className="page-container">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', padding: '1.1rem 0', borderTop: `1px solid ${C.border}`, borderBottom: `1px solid ${C.border}` }}>
-          <span style={{ fontSize: '11px', fontWeight: '500', letterSpacing: '0.07em', textTransform: 'uppercase', color: C.subtle }}>Worked with</span>
-          {ORGS.map(org => (
-            <span key={org} style={{ fontSize: '12px', padding: '4px 12px', borderRadius: '6px', border: `1px solid ${C.border}`, color: C.muted, background: C.surface }}>
-              {org}
-            </span>
-          ))}
+        {/* ════════════════════════════════════════════════
+            WHAT I DO
+        ════════════════════════════════════════════════ */}
+        <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: '18px', padding: '2.5rem', marginTop: '3.5rem', marginBottom: '2rem' }}>
+          <h2 style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '2.5rem', color: C.charcoal, letterSpacing: '-0.02em', marginBottom: '2rem' }}>What I do</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: '12px' }}>
+            {[
+              { title: 'Fractional Product CTO', desc: 'Strategic product and tech leadership for impact-sector orgs that need senior direction without full-time overhead.' },
+              { title: 'MVP Architecture & Build', desc: 'From problem definition to deployed prototype. Specialising in DPG-aligned, open-source stacks that teams can own.' },
+              { title: 'DPI / DPG Advisory', desc: 'Open-source strategy, interoperability design, and digital public infrastructure for governments and NGOs.' },
+              { title: 'Co-design Facilitation', desc: 'Multi-stakeholder workshops, user journey mapping, and participatory design for complex civic and health platforms.' },
+              { title: 'FemTech & SRHR Tech', desc: 'Specialist experience building safe, evidence-based digital health platforms designed for and with African women.' },
+              { title: 'Technical Documentation', desc: 'Product docs, developer onboarding, community playbooks, and knowledge systems for open platforms.' },
+            ].map(({ title, desc }) => (
+              <div key={title} style={{ borderLeft: `2px solid ${C.crimson}`, paddingLeft: '1rem', paddingTop: '0.1rem' }}>
+                <p style={{ fontSize: '18px', fontWeight: '500', color: C.charcoal, marginBottom: '5px' }}>{title}</p>
+                <p style={{ fontSize: '16px', color: C.muted, lineHeight: 1.6, margin: 0 }}>{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ════════════════════════════════════════════════
           WORK — PROJECT GRID
       ════════════════════════════════════════════════ */}
-      <section className="page-container py-12">
-        <p style={{ fontSize: '11px', fontWeight: '500', color: C.crimson, textTransform: 'uppercase', letterSpacing: '0.09em', marginBottom: '0.4rem' }}>Selected work</p>
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '0.35rem' }}>
-          <h2 style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '2rem', color: C.charcoal, letterSpacing: '-0.02em' }}>Impact delivered</h2>
-          <Link href="/work" style={{ fontSize: '13px', color: C.subtle, textDecoration: 'none' }}>All projects →</Link>
-        </div>
-        <p style={{ fontSize: '14px', color: C.muted, marginBottom: '2rem', lineHeight: 1.65 }}>From prototype in 1.5 days to multi-country platform deployments.</p>
+      <section className="page-container pt-16 pb-12">
+        <div style={{ border: `1px solid ${C.border}`, borderRadius: '18px', padding: '2.5rem', marginBottom: '2rem' }}>
+          <p style={{ fontSize: '18px', fontWeight: '500', color: C.crimson, textTransform: 'uppercase', letterSpacing: '0.09em', marginBottom: '0.4rem' }}>Selected work</p>
+          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '0.35rem' }}>
+            <h2 style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '2.6rem', color: C.charcoal, letterSpacing: '-0.02em' }}>What I&apos;ve built</h2>
+            <Link href="/work" style={{ fontSize: '17px', fontWeight: '500', color: C.crimson, textDecoration: 'none' }}>All projects →</Link>
+          </div>
+          <p style={{ fontSize: '18px', color: C.muted, marginBottom: '2rem', lineHeight: 1.65 }}>From co-design sprint to shipped product — built with the communities they serve.</p>
 
-        {/* Project grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: '14px' }}>
-          {projects.slice(0,3).map((p: any) => {
-            const s = SECTOR[p.sector] ?? { bg: C.stone100, fg: C.muted, label: 'Project' }
-            return (
-              <article key={p._id}
-                style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: '16px', overflow: 'hidden', display: 'flex', flexDirection: 'column', transition: 'border-color 0.2s, transform 0.2s' }}>
+          {/* Project grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: '14px' }}>
+            {projects.slice(0,3).map((p: any) => {
+              const s = SECTOR[p.sector] ?? { bg: C.stone100, fg: C.muted, label: 'Project' }
+              return (
+                <article key={p._id}
+                  style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: '16px', overflow: 'hidden', display: 'flex', flexDirection: 'column', transition: 'border-color 0.2s, transform 0.2s' }}>
 
-                {/* Screenshot / placeholder */}
-                <div style={{ position: 'relative', aspectRatio: '16/9', background: '#FBF4F1', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4A882" strokeWidth="1.2">
-                    <rect x="3" y="3" width="18" height="18" rx="3"/><polyline points="3 9 21 9"/><line x1="9" y1="21" x2="9" y2="9"/>
-                  </svg>
-                  <span style={{ fontSize: '10px', color: '#C4A882', textTransform: 'uppercase', letterSpacing: '0.06em', textAlign: 'center', lineHeight: 1.5, padding: '0 1rem' }}>
-                    {p.screenshot_label || `${p.title} · 1200×675px`}
-                  </span>
-                  {/* Sector badge */}
-                  <span style={{ position: 'absolute', top: '8px', left: '8px', fontSize: '10px', fontWeight: '500', padding: '3px 9px', borderRadius: '100px', background: s.bg + 'EE', color: s.fg }}>
-                    {s.label}
-                  </span>
-                </div>
-
-                {/* Body */}
-                <div style={{ padding: '1rem', display: 'flex', flexDirection: 'column', gap: '10px', flex: 1 }}>
-                  {p.client && <p style={{ fontSize: '11px', color: C.subtle, margin: 0 }}>{p.client}</p>}
-                  <h3 style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '1.05rem', color: C.charcoal, margin: 0, lineHeight: 1.2 }}>{p.title}</h3>
-                  {p.summary && <p style={{ fontSize: '12.5px', color: C.muted, lineHeight: 1.55, margin: 0, flex: 1 }}>{p.summary}</p>}
-                  {p.impact_metric && (
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '11px', fontWeight: '500', padding: '4px 10px', background: C.stone100, borderRadius: '6px', color: C.muted, width: 'fit-content' }}>
-                      <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: C.crimsonMid, flexShrink: 0 }} />
-                      {p.impact_metric}
-                    </div>
-                  )}
-                  {/* Tags */}
-                  {p.tags?.length > 0 && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
-                      {p.tags.slice(0,4).map((t: string) => (
-                        <span key={t} style={{ fontSize: '10px', fontWeight: '500', padding: '2px 8px', borderRadius: '100px', background: s.bg, color: s.fg }}>{t}</span>
-                      ))}
-                    </div>
-                  )}
-                  {/* CTAs */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', paddingTop: '6px', borderTop: `1px solid ${C.stone200}`, marginTop: 'auto' }}>
-                    {p.external_url && (
-                      <a href={p.external_url} target="_blank" rel="noopener noreferrer"
-                        style={{ fontSize: '12px', fontWeight: '500', color: C.crimson, textDecoration: 'none' }}>
-                        Read full case study →
-                      </a>
-                    )}
-                    {p.live_url && (
-                      <a href={p.live_url} target="_blank" rel="noopener noreferrer"
-                        style={{ fontSize: '11px', color: C.subtle, textDecoration: 'none' }}>
-                        Live product ↗
-                      </a>
-                    )}
+                  {/* Screenshot / placeholder */}
+                  <div style={{ position: 'relative', aspectRatio: '16/9', background: '#FBF4F1', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4A882" strokeWidth="1.2">
+                      <rect x="3" y="3" width="18" height="18" rx="3"/><polyline points="3 9 21 9"/><line x1="9" y1="21" x2="9" y2="9"/>
+                    </svg>
+                    <span style={{ fontSize: '17px', color: '#C4A882', textTransform: 'uppercase', letterSpacing: '0.06em', textAlign: 'center', lineHeight: 1.5, padding: '0 1rem' }}>
+                      {p.screenshot_label || `${p.title} · 1200×675px`}
+                    </span>
+                    {/* Sector badge */}
+                    <span style={{ position: 'absolute', top: '8px', left: '8px', fontSize: '17px', fontWeight: '500', padding: '3px 9px', borderRadius: '100px', background: s.bg + 'EE', color: s.fg }}>
+                      {s.label}
+                    </span>
                   </div>
-                </div>
-              </article>
-            )
-          })}
-        </div>
 
-        {/* See all */}
-        <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
-          <Link href="/work"
-            style={{ fontSize: '13px', fontWeight: '500', padding: '0.55rem 1.5rem', borderRadius: '100px', border: `1px solid ${C.border}`, color: C.charcoal, display: 'inline-block', textDecoration: 'none' }}>
-            See all 5 projects
-          </Link>
+                  {/* Body */}
+                  <div style={{ padding: '1rem', display: 'flex', flexDirection: 'column', gap: '10px', flex: 1 }}>
+                    {p.client && <p style={{ fontSize: '18px', color: C.subtle, margin: 0 }}>{p.client}</p>}
+                    <h3 style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '1.75rem', color: C.charcoal, margin: 0, lineHeight: 1.2 }}>{p.title}</h3>
+                    {p.summary && <p style={{ fontSize: '16px', color: C.muted, lineHeight: 1.55, margin: 0, flex: 1 }}>{p.summary}</p>}
+                    {p.impact_metric && (
+                      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '18px', fontWeight: '500', padding: '4px 10px', background: C.stone100, borderRadius: '6px', color: C.muted, width: 'fit-content' }}>
+                        <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: C.crimsonMid, flexShrink: 0 }} />
+                        {p.impact_metric}
+                      </div>
+                    )}
+                    {/* Tags */}
+                    {p.tags?.length > 0 && (
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
+                        {p.tags.slice(0,4).map((t: string) => (
+                          <span key={t} style={{ fontSize: '17px', fontWeight: '500', padding: '2px 8px', borderRadius: '100px', background: s.bg, color: s.fg }}>{t}</span>
+                        ))}
+                      </div>
+                    )}
+                    {/* CTAs */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', paddingTop: '6px', borderTop: `1px solid ${C.stone200}`, marginTop: 'auto' }}>
+                      {p.cta_url ? (
+                        <a href={p.cta_url} target="_blank" rel="noopener noreferrer"
+                          style={{ fontSize: '12px', fontWeight: '500', color: C.crimson, textDecoration: 'none' }}>
+                          {p.cta_label || 'Join the community →'}
+                        </a>
+                      ) : p.external_url && (
+                        <a href={p.external_url} target="_blank" rel="noopener noreferrer"
+                          style={{ fontSize: '12px', fontWeight: '500', color: C.crimson, textDecoration: 'none' }}>
+                          Read full case study →
+                        </a>
+                      )}
+                      {p.live_url && (
+                        <a href={p.live_url} target="_blank" rel="noopener noreferrer"
+                          style={{ fontSize: '18px', color: C.subtle, textDecoration: 'none' }}>
+                          Live product ↗
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              )
+            })}
+          </div>
         </div>
       </section>
 
       {/* ════════════════════════════════════════════════
           SPRINT CTA BANNER
       ════════════════════════════════════════════════ */}
-      <section className="page-container pb-12">
-        <div style={{ background: C.crimsonLight, border: `1px solid #F5C4BE`, borderRadius: '16px', padding: '1.75rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem', flexWrap: 'wrap' }}>
-          <div>
-            <p style={{ fontSize: '14px', fontWeight: '500', color: C.crimsonDark, marginBottom: '4px' }}>Product sprint · 3–5 days · $250–400</p>
-            <p style={{ fontSize: '14px', color: '#57534E', margin: 0, lineHeight: 1.6 }}>
-              You&apos;ve launched. Users sign up. Then nothing. Let&apos;s fix that together.
+      <section className="page-container pt-12 pb-12">
+        <div style={{ background: '#FAEAE8', border: '1px solid #F5C4BE', borderRadius: '16px', padding: '2rem 2.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', maxWidth: '520px' }}>
+            <p style={{ fontSize: '18px', fontWeight: '500', color: '#C0392B', textTransform: 'uppercase', letterSpacing: '0.09em', margin: 0 }}>
+              Work with me
+            </p>
+            <p style={{ fontFamily: '"DM Serif Display", Georgia, serif', fontSize: '1.75rem', color: '#1E1E2E', lineHeight: 1.25, margin: 0, letterSpacing: '-0.01em' }}>
+              You launched. People signed up. Then went quiet.
+            </p>
+            <p style={{ fontSize: '18px', color: '#57534E', lineHeight: 1.7, margin: 0 }}>
+              I run focused 3–5 day sprints where we find exactly where users are dropping off — and ship the fixes together before we&apos;re done. Not a report. Real changes, real fast.
+            </p>
+            <p style={{ fontSize: '12px', color: '#8B1F15', margin: 0, fontWeight: '500' }}>
+              Typical investment: $250–400 · Limited spots available
             </p>
           </div>
           <a href="https://quickjobs.naijeriatoweett.com/" target="_blank" rel="noopener noreferrer"
-            style={{ fontSize: '13px', fontWeight: '500', padding: '0.6rem 1.4rem', borderRadius: '100px', background: C.crimson, color: '#fff', textDecoration: 'none', flexShrink: 0 }}>
+            style={{ fontSize: '17px', fontWeight: '500', padding: '0.7rem 1.5rem', borderRadius: '100px', background: '#C0392B', color: '#fff', textDecoration: 'none', flexShrink: 0, whiteSpace: 'nowrap' }}>
             Apply for a sprint →
           </a>
         </div>

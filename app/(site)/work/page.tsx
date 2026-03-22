@@ -70,13 +70,13 @@ export default async function WorkPage() {
     <div style={{ background: C.warmBg, minHeight: '100vh' }}>
       <div className="page-container py-12">
 
-        <p style={{ fontSize:'11px', fontWeight:'500', color:C.crimson, textTransform:'uppercase', letterSpacing:'0.09em', marginBottom:'0.4rem' }}>
+        <p style={{ fontSize:'18px', fontWeight:'500', color:C.crimson, textTransform:'uppercase', letterSpacing:'0.09em', marginBottom:'0.4rem' }}>
           Selected work
         </p>
         <h1 style={{ fontFamily:'"DM Serif Display",Georgia,serif', fontSize:'2.5rem', color:C.charcoal, letterSpacing:'-0.025em', marginBottom:'0.4rem' }}>
           Impact delivered
         </h1>
-        <p style={{ fontSize:'15px', color:C.muted, marginBottom:'2.5rem', lineHeight:1.7, maxWidth:'54ch' }}>
+        <p style={{ fontSize:'20px', color:C.muted, marginBottom:'2.5rem', lineHeight:1.7, maxWidth:'54ch' }}>
           From 1.5-day prototypes to multi-country platform deployments. Every project co-designed with the community it serves.
         </p>
 
@@ -102,35 +102,35 @@ export default async function WorkPage() {
                       <div style={{ position:'relative', width:'200px', height:'200px' }}>
                         <Image src="/images/dada.png" alt="DADA" fill style={{ objectFit:'contain' }} />
                       </div>
-                      <span style={{ fontSize:'10px', color:'#C4A882', textAlign:'center', lineHeight:1.5 }}>{p.screenshot_label}</span>
+                      <span style={{ fontSize:'17px', color:'#C4A882', textAlign:'center', lineHeight:1.5 }}>{p.screenshot_label}</span>
                     </div>
                   ) : (
                     <div style={{ width:'100%', height:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'8px', padding:'1rem' }}>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4A882" strokeWidth="1.2">
                         <rect x="3" y="3" width="18" height="18" rx="3"/><polyline points="3 9 21 9"/><line x1="9" y1="21" x2="9" y2="9"/>
                       </svg>
-                      <span style={{ fontSize:'10px', color:'#C4A882', textAlign:'center', lineHeight:1.5 }}>{p.screenshot_label}</span>
+                      <span style={{ fontSize:'17px', color:'#C4A882', textAlign:'center', lineHeight:1.5 }}>{p.screenshot_label}</span>
                     </div>
                   )}
-                  <span style={{ position:'absolute', top:'10px', left:'10px', fontSize:'10px', fontWeight:'500', padding:'3px 10px', borderRadius:'100px', background:s.bg+'EE', color:s.fg }}>
+                  <span style={{ position:'absolute', top:'10px', left:'10px', fontSize:'17px', fontWeight:'500', padding:'3px 10px', borderRadius:'100px', background:s.bg+'EE', color:s.fg }}>
                     {s.label}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div style={{ padding:'2rem', display:'flex', flexDirection:'column', gap:'1rem', order: i % 2 === 0 ? 2 : 1, justifyContent:'center' }}>
-                  {p.client && <p style={{ fontSize:'12px', color:C.subtle, margin:0 }}>{p.client}</p>}
-                  <h2 style={{ fontFamily:'"DM Serif Display",Georgia,serif', fontSize:'1.75rem', color:C.charcoal, lineHeight:1.15, margin:0 }}>{p.title}</h2>
-                  <p style={{ fontSize:'14px', color:C.muted, lineHeight:1.75, margin:0 }}>{p.summary}</p>
+                  {p.client && <p style={{ fontSize:'16px', color:C.subtle, margin:0 }}>{p.client}</p>}
+                  <h2 style={{ fontFamily:'"DM Serif Display",Georgia,serif', fontSize:'2.3rem', color:C.charcoal, lineHeight:1.15, margin:0 }}>{p.title}</h2>
+                  <p style={{ fontSize:'18px', color:C.muted, lineHeight:1.75, margin:0 }}>{p.summary}</p>
 
                   {/* Delivers */}
                   {p.delivers && (
                     <div>
-                      <p style={{ fontSize:'11px', fontWeight:'500', color:C.subtle, textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:'8px' }}>Directly delivers</p>
+                      <p style={{ fontSize:'18px', fontWeight:'500', color:C.subtle, textTransform:'uppercase', letterSpacing:'0.07em', marginBottom:'8px' }}>Directly delivers</p>
                       {p.delivers.map((d: string) => (
                         <div key={d} style={{ display:'flex', gap:'8px', marginBottom:'5px' }}>
                           <span style={{ color:C.crimson, fontWeight:'500', flexShrink:0 }}>✓</span>
-                          <span style={{ fontSize:'13px', color:C.muted, lineHeight:1.55 }}>{d}</span>
+                          <span style={{ fontSize:'17px', color:C.muted, lineHeight:1.55 }}>{d}</span>
                         </div>
                       ))}
                     </div>
@@ -140,7 +140,7 @@ export default async function WorkPage() {
                   {p.tags && (
                     <div style={{ display:'flex', flexWrap:'wrap', gap:'5px' }}>
                       {p.tags.map((t: string) => (
-                        <span key={t} style={{ fontSize:'10px', fontWeight:'500', padding:'3px 9px', borderRadius:'100px', background:s.bg, color:s.fg }}>{t}</span>
+                        <span key={t} style={{ fontSize:'17px', fontWeight:'500', padding:'3px 9px', borderRadius:'100px', background:s.bg, color:s.fg }}>{t}</span>
                       ))}
                     </div>
                   )}
@@ -149,13 +149,13 @@ export default async function WorkPage() {
                   <div style={{ display:'flex', gap:'12px', flexWrap:'wrap' }}>
                     {p.external_url && (
                       <a href={p.external_url} target="_blank" rel="noopener noreferrer"
-                        style={{ fontSize:'13px', fontWeight:'500', padding:'0.5rem 1.2rem', borderRadius:'100px', background:C.crimson, color:'#fff', textDecoration:'none' }}>
+                        style={{ fontSize:'17px', fontWeight:'500', padding:'0.5rem 1.2rem', borderRadius:'100px', background:C.crimson, color:'#fff', textDecoration:'none' }}>
                           Read full case study →
                       </a>
                     )}
                     {p.live_url && (
                       <a href={p.live_url} target="_blank" rel="noopener noreferrer"
-                        style={{ fontSize:'13px', padding:'0.5rem 1.15rem', borderRadius:'100px', border:`1px solid ${C.border}`, color:C.charcoal, textDecoration:'none' }}>
+                        style={{ fontSize:'17px', padding:'0.5rem 1.15rem', borderRadius:'100px', border:`1px solid ${C.border}`, color:C.charcoal, textDecoration:'none' }}>
                           Live product ↗
                       </a>
                     )}
