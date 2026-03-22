@@ -23,10 +23,10 @@ const C = {
 
 const ALL_PROJECTS = [
   { _id:'1', title:'NairobiTalks', client:'World Bank · Nairobi County Gov', sector:'govtech',
-    summary:'Civic tech platform co-designed with citizens and officials in 1.5 days. Filterable admin dashboard, swipe-based public interface, AI chatbot for planning literacy. MIT licensed, OpenFn-ready.',
-    impact_metric:'1.5 days to prototype', tags:['DPI','Co-design','Rails','OpenFn-ready','World Bank'],
+    summary:'Civic tech platform co-designed with citizens and officials in 1.5 days. Filterable admin dashboard, swipe-based public interface, AI chatbot for planning literacy. MIT licensed.',
+    impact_metric:'1.5 days to prototype', tags:['DPI','Co-design','Rails','World Bank'],
     external_url:'https://mamatechafrica.github.io/NairobiTalks-NCG/', live_url:null,
-    delivers:['1.5 days from problem to prototype','Co-design with 4 stakeholder groups','OpenFn-ready architecture','Non-technical handover documentation','MIT open source'],
+    delivers:['1.5 days from problem to prototype','Co-design with 4 stakeholder groups','Non-technical handover documentation','MIT open source'],
     screenshot_label:'NairobiTalks dashboard — 1200×675px' },
   { _id:'2', title:'AskRafikey', client:'Digital Health Coalition of Kenya', sector:'healthtech',
     summary:"Kenya's first AI-driven SRHR chatbot. 18 verified topic areas, GPS service finder, full admin CMS for non-technical coalition staff. 5 rounds of co-design and usability testing.",
