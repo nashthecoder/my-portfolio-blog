@@ -92,21 +92,21 @@ export default async function WorkPage() {
             const s = SECTOR[p.sector] ?? { bg:C.stone100, fg:C.muted, label:'Project' }
             return (
               <article key={p._id}
-                style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'0', alignItems:'stretch',
+                style={{ display:'grid', gridTemplateColumns: i % 2 === 0 ? '2fr 1fr' : '1fr 2fr', gap:'0', alignItems:'stretch',
                   background:C.surface, borderRadius:'18px', border:`1px solid ${C.border}`, overflow:'hidden' }}>
 
                 {/* Screenshot */}
                 <div style={{ position:'relative', minHeight:'320px', background:'#FBF4F1', order: i % 2 === 0 ? 1 : 2 }}>
                   {p.cover_image ? (
-                    <Image src={p.cover_image} alt={p.title} fill style={{ objectFit:'contain', padding:'8px' }} />
+                    <Image src={p.cover_image} alt={p.title} fill style={{ objectFit:'cover' }} />
                   ) : p.screenshot_url ? (
                     <a href={p.external_url || p.live_url || '#'} target="_blank" rel="noopener noreferrer" style={{ display:'block', width:'100%', height:'100%' }}>
-                      <Image src={p.screenshot_url} alt={p.screenshot_label} fill style={{ objectFit:'contain', padding:'8px' }} />
+                      <Image src={p.screenshot_url} alt={p.screenshot_label} fill style={{ objectFit:'cover' }} />
                     </a>
                   ) : p.screenshot_label?.includes('DADA') ? (
                     <div style={{ width:'100%', height:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'8px', padding:'1rem' }}>
                       <div style={{ position:'relative', width:'200px', height:'200px' }}>
-                        <Image src="/images/dada.png" alt="DADA" fill style={{ objectFit:'contain', padding:'8px' }} />
+                        <Image src="/images/dada.png" alt="DADA" fill style={{ objectFit:'cover' }} />
                       </div>
                       <span style={{ fontSize:'17px', color:'#C4A882', textAlign:'center', lineHeight:1.5 }}>{p.screenshot_label}</span>
                     </div>
