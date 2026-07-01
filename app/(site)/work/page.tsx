@@ -98,15 +98,15 @@ export default async function WorkPage() {
                 {/* Screenshot */}
                 <div style={{ position:'relative', minHeight:'320px', background:'#FBF4F1', order: i % 2 === 0 ? 1 : 2 }}>
                   {p.cover_image ? (
-                    <Image src={p.cover_image} alt={p.title} fill style={{ objectFit:'cover' }} />
+                    <Image src={p.cover_image} alt={p.title} fill style={{ objectFit:'contain', padding:'8px' }} />
                   ) : p.screenshot_url ? (
                     <a href={p.external_url || p.live_url || '#'} target="_blank" rel="noopener noreferrer" style={{ display:'block', width:'100%', height:'100%' }}>
-                      <Image src={p.screenshot_url} alt={p.screenshot_label} fill style={{ objectFit:'cover' }} />
+                      <Image src={p.screenshot_url} alt={p.screenshot_label} fill style={{ objectFit:'contain', padding:'8px' }} />
                     </a>
                   ) : p.screenshot_label?.includes('DADA') ? (
                     <div style={{ width:'100%', height:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'8px', padding:'1rem' }}>
                       <div style={{ position:'relative', width:'200px', height:'200px' }}>
-                        <Image src="/images/dada.png" alt="DADA" fill style={{ objectFit:'contain' }} />
+                        <Image src="/images/dada.png" alt="DADA" fill style={{ objectFit:'contain', padding:'8px' }} />
                       </div>
                       <span style={{ fontSize:'17px', color:'#C4A882', textAlign:'center', lineHeight:1.5 }}>{p.screenshot_label}</span>
                     </div>
