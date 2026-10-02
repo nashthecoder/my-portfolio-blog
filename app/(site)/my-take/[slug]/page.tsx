@@ -25,8 +25,8 @@ export default async function PostPage({ params }: { params: { slug: string } })
       <div style={{ maxWidth:'42rem', margin:'0 auto', padding:'3rem 1.5rem' }}>
 
         {/* Back */}
-        <Link href="/blog" style={{ fontSize:'13px', color:C.muted, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:'5px', marginBottom:'2rem' }}>
-          ← Writing
+        <Link href="/my-take" style={{ fontSize:'13px', color:C.muted, textDecoration:'none', display:'inline-flex', alignItems:'center', gap:'5px', marginBottom:'2rem' }}>
+          ← My Take
         </Link>
 
         {/* Header */}
@@ -55,7 +55,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
         {/* Footer */}
         <div style={{ marginTop:'3rem', paddingTop:'1.5rem', borderTop:`1px solid ${C.border}` }}>
-          <Link href="/blog" style={{ fontSize:'13px', fontWeight:'500', color:C.crimson, textDecoration:'none' }}>← Back to writing</Link>
+          <Link href="/my-take" style={{ fontSize:'13px', fontWeight:'500', color:C.crimson, textDecoration:'none' }}>← Back to My Take</Link>
         </div>
 
       </div>

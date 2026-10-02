@@ -58,6 +58,18 @@ const ALL_PROJECTS = [
     external_url:null, live_url:null,
     delivers:['First-of-its-kind for African women','Culturally grounded design','AI-powered companion'],
     screenshot_url:null, screenshot_label:'DADA coming soon' },
+  { _id:'7', title:'Women Leaders Directory', client:'Transform Health Coalition', sector:'healthtech',
+    summary:'Directory that increases the visibility, representation and engagement of women leaders across leadership, policy and technical spaces in digital health — 82+ live profiles, search and filters, an analytics world map and a full admin console for non-technical coalition staff.',
+    impact_metric:'82+ leaders live', tags:['Digital Health','Women Leaders','Supabase','Open data','Coalition CMS'],
+    external_url:null, live_url:'https://Transform-Health-2.github.io/Women-leaders-database/',
+    delivers:['82+ verified women leaders live','Public searchable directory with analytics world map','Self-service magic-link profile management','Full admin console for coalition staff','CI/CD auto-deploy to GitHub Pages'],
+    screenshot_url:null, screenshot_label:'Women Leaders Directory — live' },
+  { _id:'8', title:'AIxD Threat Map', client:'Power for Democracies (P4Dem)', sector:'civic',
+    summary:'Filterable, searchable database of AI threats and opportunities to democracy, mapped to the IDEA Democracy Assessment Framework. Built for P4D researchers to share with policymakers.',
+    impact_metric:'Policymaker-ready tool', tags:['Democracy','AI','Research','Astro','Open data'],
+    external_url:null, live_url:'https://www.powerfordemocracies.org/research/our-research/ai-democracy-landscape/',
+    delivers:['Searchable database of AI threats & opportunities','Mapped to IDEA Democracy Assessment Framework','Built for researchers to brief policymakers','Staging + production deployment pipeline'],
+    screenshot_url:null, screenshot_label:'AIxD Threat Map — live' },
 ]
 
 const SECTOR: Record<string, { bg: string; fg: string; label: string }> = {

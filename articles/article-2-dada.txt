@@ -1,0 +1,70 @@
+Title: Why I Didn't Start With Wire-frames.
+Published: Jul 10, 2025
+LinkedIn URL: https://www.linkedin.com/pulse/my-take-why-i-didnt-start-wire-frames-naijeria-toweett--hhjlf/
+Tags: DADA App, MAA Africa, Build In Public, UX Design, Africa Tech
+
+---
+
+I didn't begin with code. I began with a question:
+
+"If I didn't know what menopause was… how many others were silently going through it too?"
+
+The Beginning
+
+I was 49 when the symptoms started: Hot flashes. Night sweats. Insomnia. Mood swings. Forgetfulness. Salt in the fridge. Crying, laughing, withdrawing.
+
+And still — I didn't recognize it as menopause.
+
+I've worked in reproductive health for nearly two decades. But no one had prepared me. Not my doctor. Not my workplace. Not even my mother.
+
+When I first shared my experience — in The Guardian and on the Menopause Buddies podcast — the response was immediate and sobering.
+
+If I had missed the signs… how many other African women were navigating menopause in silence?
+
+Breaking the Silence: MAA-Africa
+
+That's why I started MAA-Africa — Menopause Awareness & Advocacy Africa — a community-first initiative to:
+- Break the silence
+- Share honest, lived stories
+- Build culturally relevant support networks across the continent
+
+But the product builder in me had more questions:
+Who am I building this for? If we build it, will they come?
+
+Listening, Not Launching
+
+Inspired by Nadia Odunayo's thoughtful approach to building StoryGraph, I chose to listen before I designed anything.
+
+I created a simple survey. 29 women responded — from Kenya, Nigeria, Uganda, South Africa, Tanzania, Botswana, and Eswatini. Here's what they told me:
+
+"I didn't know what was happening to my body." "No one talks about this in my family or workplace." "I want community, not just content." "I want to be ready. I want to know what to expect."
+
+What I'm Building: Meet DADA
+
+From those voices, DADA was born — a menopause companion app designed with and for African women.
+
+Phase 1: A Community-First MVP
+
+This is the tool I wish I had.
+
+DADA will include:
+- A guided onboarding flow to help women understand what to expect
+- A safe, moderated forum to share stories and ask questions
+- Personalized, culturally-relevant content based on your journey
+- Features designed for privacy, ease, and emotional support
+
+Building in Public
+
+I'm sharing every step — from UX to technical tradeoffs — on the Product Engineers' Logs over on Medium.
+
+Weekly product milestones:
+- Week 1: Onboarding Flow
+- Week 2: Forum Structure
+- Week 3: Personalization Logic
+- …and more to come
+
+Want to Help Shape DADA?
+
+We're still early. But the momentum is real. Are you going through menopause — or building for those who are? Do you want to test DADA, partner with us, or shape the future of menopause care in Africa?
+
+We'd love to hear from you. team(at)maa-africa.org

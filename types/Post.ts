@@ -8,4 +8,8 @@ export type Post = {
     excerpt?: string
     publishedAt?: string
     tags?: string[]
+    contentType?: 'article' | 'talk' | 'walkthrough'
+    videoUrl?: string
+    eventName?: string
+    linkedinUrl?: string
 }

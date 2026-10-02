@@ -1,0 +1,87 @@
+Title: Part 1: Safety, In Place: Rethinking the Survivor Journey with Embedded Support.
+Published: Jun 22, 2025
+LinkedIn URL: https://www.linkedin.com/pulse/safety-place-rethinking-survivor-journey-embedded-naijeria-toweett--0vfcf/
+Tags: Safety By Design, Product Thinking, Survivor Centred, Trust And Safety, Digital Safety, UX For Good
+
+---
+
+Here goes, please be gentle — My Take, a new series of honest reflections on tech and product I've built, tested, used, or come across. I share personal insights, UX critiques, and product ideas that others building impactful products might find useful—whether you're a PM, founder, or just someone who thinks deeply about product user experience.
+
+Today, we're starting with something deeply important: how we can support survivors of online harm — in real time.
+
+My Experience with Survivor AI
+
+Earlier this month, I took part in the Survivor AI Testathon, hosted by CHAYN — a hands-on testing session for the Survivor AI online tool, soon to be launched that helps survivors of image-based abuse generate takedown letters and navigate platform policies. The tool impressed me. It was technically solid, clearly survivor-centred, and felt like a step forward in how we think about digital safety.
+
+How to Report Content Shared Without Your Consent with Survivor AI
+
+1. The user navigates to the Survivor AI tool and clicks on the Start your request button.
+2. Choose the Platform - The user starts by selecting where the harmful content is hosted — whether that's TikTok, Facebook, Instagram, or another platform. This helps the system tailor the letter to that platform's policies and requirements.
+3. Share Past Reporting Attempts - Next, the user indicates if they've already tried reporting the content through standard or escalated channels. This avoids duplicating failed steps and builds a stronger, more targeted case.
+4. Describe the Content and Violation - Through a series of guided questions, the user shares what type of content was shared, how it was distributed, and where it lives online. There is an option to share the URL or describe where it is located. They're also asked to verify their connection to the content and describe how it's impacted them.
+5. Answer Supporting Questions - Based on their responses, AI generates follow-up questions to strengthen the case — like how the content was obtained or where exactly it's posted. These help personalize and legitimize the request.
+6. AI Drafts a Takedown Letter - With everything in place, the AI generates a professionally-worded takedown letter aligned with the selected platform's policies. It's private, fast, and requires no legal knowledge.
+7. Review, Copy, and Send - The user reviews the final letter, adds their name, and copies it into an email to the correct platform contact. Clear instructions make it easy to send immediately.
+8. Get Support and Next Steps - After sending, the user receives guidance on what to expect next — including when to follow up — and are offered access to emotional support tools and healing resources.
+
+The Challenge:
+
+Survivors must leave the offending platform, switch mental context, manually locate and re-enter content, and go through a multi-step form — potentially all while in a heightened emotional state.
+
+My Take: Meet Survivors Where They Are
+
+As I ran through the test flow, I put on my product hat and an idea came to me.
+
+"What if we didn't ask survivors to come to us? What if we brought Survivor AI to them — right where harm happens?"
+
+In addition to what has already been built out, why not build and test out a Survivor AI in-situ support. What would this look like? Two such extensions came to mind: CareerFlow AI which activates on LinkedIn, pre-fills forms for job seekers and Grammarly the on-page UX assistant — overlays UI and provides real-time suggestions.
+
+Proposed Solution: Survivor AI Browser Extension
+
+Reduce emotional and cognitive friction by enabling survivors to take action without ever leaving the platform.
+
+What would it do?
+- Be activated directly on social platforms - Instagram, TikTok, Facebook, X etc.
+- Let users right-click or hover on a post to flag it - "Flag via Survivor AI"
+- Auto-detect the content context - image, username, URL, timestamp
+- Pre-fill takedown letter flow (platform, URL, metadata, timestamps) - removing manual steps entirely
+- Offer on-page guidance via overlays
+- Optional AI-powered enhancements: These could include AI-generated letter preview, platform-specific rules, emotional support resources and FAQs and survivor tips
+
+How I'd Build It (as a PM)
+
+The plan is to stay lean and learn fast and iterate. I would build it in three phases.
+
+MVP / Alpha - simple, private, in-situ support — no cloud infra, no survivor friction.
+- Chrome-only browser extension
+- Instagram use case only
+- Right-click → "Flag via Survivor AI" → auto-generate takedown letter
+- Local-only data storage
+- No login required
+
+Beta - expands coverage while layering in safety-first persistence.
+- Add TikTok and X support
+- Optional encrypted local login for saving drafts and tracking progress
+- Broader content type support (e.g. impersonation, doxxing)
+- Embedded access to regional/emotional support tools
+
+V1.0 - make the tool scalable, data-informed, and survivor-controlled.
+- Support Firefox and Edge
+- Cross-platform functionality
+- Opt-in Survivor Dashboard for saved letters and follow-ups
+- Anonymous usage analytics (opt-in) to track impact and iterate safely
+
+My take - Flip the script.
+
+Survivors would no longer have to:
+- Exit the site where harm is happening
+- Copy/paste triggering content into a separate tool
+- Re-describe traumatic events while navigating a multi-step flow
+
+A quick note on assumptions
+
+Of course, this concept rests on a number of assumptions — from how survivors access platforms (desktop vs. mobile), to the reliability of scraping content, to how much users will trust and install an extension handling sensitive data. I'm fully aware of these tradeoffs and constraints, and I'll unpack them — and how I'd validate or mitigate them — in a follow-up piece focused on product risks and real-world adoption patterns.
+
+By embedding directly into the user's environment, we reduce the emotional and cognitive cost of taking action. We make safety a behavior, not a journey. And for anyone who's ever frozen during a moment of harm online — that shift matters.
+
+This is My Take. Born from testing, shaped by need, and grounded in the belief that technology should be inclusive, sustainable, and built in service of impact. I'd love to hear yours — what would you build to make online safety tools radically more accessible?

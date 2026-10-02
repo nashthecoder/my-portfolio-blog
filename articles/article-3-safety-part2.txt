@@ -1,0 +1,37 @@
+Title: Part 2: Safety, In Place: Survivor Journey with Embedded Support - What Could Go Wrong?
+Published: Jul 6, 2025
+LinkedIn URL: https://www.linkedin.com/pulse/part-2-safety-place-survivor-journey-embedded-support-toweett--dpqff/
+Tags: Safety By Design, Product Thinking, Build In Public, Survivor Centred, Trust And Safety, Digital Safety, NMWSO, UX For Good
+
+---
+
+Last month, I tested a tool called Survivor AI — designed to help people impacted by image-based abuse take back control by generating platform-specific takedown letters. I shared my reflections in Part 1: Safety, In Place — where I explored what made the tool powerful, and asked one big question:
+
+What if we didn't ask survivors to come to us? What if we brought the support to them — right where harm happens?
+
+That led to a new concept I've been researching and preparing to prototype. Survivor AI, as a browser extension — embedded directly on platforms like Instagram, TikTok, or X. The goal: Let survivors right-click a post, trigger takedown support, and act immediately — without switching tabs, digging for policies, or re-describing trauma.
+
+But let's be honest:
+
+Safety in place is a bold promise — and bold ideas come with serious assumptions.
+
+So in this post, I'm unpacking the risks, tradeoffs, and product decisions behind this in-situ approach — before we build.
+
+7 Assumptions, 7 Risks — and What We're Doing About Them
+
+We're building a safety-critical tool. Every assumption in the design needs to be called out explicitly, along with the tradeoffs we're making, the technical implications, and how we'll validate or monitor each one during prototyping.
+
+One Non-Negotiable: No Misuse
+
+This tool will never scan for or identify content on its own. That's an intentional boundary. The MVP will be survivor-initiated only — no one can target or report someone else using it.
+
+Where this is going:
+
+I'm building this concept for the NMWSO Safety by Design Challenge — a program focused on trauma-informed, proactive safety design in digital tools.
+
+In Part 3, I'll share:
+- How I'm validating this design with survivors directly
+- What flows we're prototyping to reduce friction — emotional and technical
+- Lessons on building with privacy, trust, and consent at the core.
+
+This is My Take. Test, challenge, and pressure-check before we build - because getting it right means creating tools that survivors can actually trust and use. Now I'd love to hear yours — what assumptions would you challenge? What would make this safer, smarter, or more accessible for survivors in the real world?

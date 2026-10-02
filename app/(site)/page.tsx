@@ -202,6 +202,7 @@ export default async function HomePage() {
               {[
                 { text: 'World Bank Civic Residency 2025', bg: C.crimsonLight, fg: C.crimsonDark },
                 { text: 'Women in GovTech',               bg: C.burgundyLight, fg: C.burgundy },
+                { text: 'Friendly.rb 2025 Speaker',        bg: C.amber,         fg: C.amberDark },
                 { text: 'Friendly.rb 2023 Speaker',        bg: C.amber,         fg: C.amberDark },
                 { text: 'GitHub Tech for Social Good',     bg: C.crimsonLight, fg: C.crimsonDark },
               ].map(({ text, bg, fg }) => (

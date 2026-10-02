@@ -115,6 +115,10 @@ export async function getPosts(): Promise<Post[]> {
       excerpt,
       publishedAt,
       tags,
+      contentType,
+      videoUrl,
+      eventName,
+      linkedinUrl,
       "image": image.asset->url,
     }`
   )
@@ -131,6 +135,10 @@ export async function getPost(slug: string): Promise<Post | null> {
       excerpt,
       publishedAt,
       tags,
+      contentType,
+      videoUrl,
+      eventName,
+      linkedinUrl,
       "image": image.asset->url,
     }`,
     { slug }

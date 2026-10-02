@@ -1,0 +1,92 @@
+Title: My Take: Re-imagining TEGA — If I was to do it Over, What Would TEGA 2.0 be?
+Published: Jul 20, 2025
+LinkedIn URL: https://www.linkedin.com/pulse/my-take-re-imagining-tegaif-i-do-over-what-would-tega-toweett--qtglf/
+Tags: Product Management, Tech For Good, User Experience, Social Impact, Systems Thinking, Human Centered Design, Digital Product Design, Inclusive Design, Build Better
+
+---
+
+Today, I'm revisiting one of the most meaningful and impactful projects I've had the honour to work on as a Product Manager — TEGA Tech.
+
+In my previous position as a Technical Manager at Girl Effect—one of my roles was serving as the Global TEGA Tech Manager—I had the privilege of helping shape a platform designed to elevate the voices of young people through peer-to-peer research led by youth themselves. I worked closely with Here I Am Studio, our technology development partner, and the Girl Effect Evidence & Insights team, who used the platform to gather insights for formative research, monitoring and evaluation and intervention design focused on young people.
+
+I supported the development and implementation of the TEGA Tech 3-Year Roadmap, oversaw ongoing infrastructure maintenance, and led the redesign of our e-learning platform (Moodle) to better support and equip country teams.
+
+TEGA Tech Architecture
+
+At its core, TEGA Tech comprised four separate applications: – Two Android apps (a Recruitment app and a Research app) – A cloud-based platform called the Data Hub – A standalone Moodle platform for training the young peer researchers.
+
+Eventually, the Recruitment App and Moodle were retired—even though the needs they addressed remained deeply relevant. In place of the Recruitment App, we relied on external agencies to recruit respondents—a process that was costly, time-consuming, and harder to manage at scale. Without Moodle, onboarding became entirely dependent on physical workshops. While in-person training had always been a component, Moodle had supported that process by enabling continuous capacity development—allowing youth researchers to revisit content, learn at their own pace, and stay engaged beyond initial training.
+
+Without it, the learning experience became more fragmented, harder to scale, and more resource-intensive to deliver consistently.
+
+In my view, the fragmented setup—though powerful—created real operational and technical challenges. Others might see it differently, but this reflection is shaped by what I experienced on the ground—and by where I believe systems like this must evolve: toward greater unity, flexibility, and inclusivity.
+
+The Challenge: A Platform Held Back by Its Origins
+
+I know firsthand the promise TEGA holds, but I have witnessed its constraints—many of which still echo today:
+
+Limited Accessibility: Tied to the Google Play Store, TEGA remains inaccessible to users without Android devices or in regions with limited Play Store support.
+Operational Barriers: Training and setup often required in-person presence, making scale difficult in countries without a Girl Effect footprint.
+Legacy Architecture: The monolithic Laravel and VueJS-based Data Hub increases maintenance overhead, resists integration, and limits flexibility.
+Scaling Friction: A rigid system architecture and third-party dependencies make it difficult to adapt to new research demands or scale efficiently.
+
+These weren't flaws—just tradeoffs made to meet urgent needs, using the tools available at the time. But if TEGA Tech's purpose is still relevant today—and I believe it is—it deserves a fresh look. One that opens up new possibilities for scale, sustainability, and long-term impact.
+
+How I'd Rebuild It—With Systems Change in Mind
+
+In hindsight, I can see the shape of what TEGA could become—leaner, more inclusive, and easier to scale.
+
+Some ideas are still forming. But what I do know is this: the next version must meet users where they are, not ask them to catch up. It must reduce barriers, simplify tools, and support insight with less friction.
+
+Instead of overbuilding, it would focus on what's essential. And rather than replacing what worked, it would gently reassemble the ecosystem—Recruitment, Research, Data, and Learning—into something modular, coherent, and quietly powerful.
+
+Where the Thinking Is Leading Me
+
+With time on my hands lately, I've been reflecting—not just on what I helped manage, but on what I could have done differently. It's been a rare chance to step back, think deeply, and ask bigger questions.
+
+My current focus is less on features—and more on principles. What kind of system truly serves its mission today? What would meet the needs of real people—field researchers working offline, youth researchers shaping programs, analysts, translators, and project managers trying to keep everything on track?
+
+Not just as roles in a user flow—but as humans, navigating limited connectivity, shifting priorities, and real-world constraints.
+
+And what I keep coming back to is this:
+
+Simplicity over scale
+Access over perfection
+Flexibility over control
+Care over speed
+
+The way forward isn't to build more. It's to build with intent. To shape systems that work at human speed—not just machine speed.
+
+Rooted in the Why
+
+What's stayed with me most after working on TEGA isn't the platform itself—it's the perspective that came from building a system that worked well for its time… and watching its limits emerge, slowly but clearly, over time.
+
+TEGA Tech met urgent needs, proved impact, and scaled across countries. But it was also built over a decade ago, using the tools and assumptions of that moment. Supporting and maintaining it showed me just how fast user needs evolve—and how critical it is to design systems that can evolve with them.
+
+I'm now drawn to tools that serve real needs through sustainable, resilient architecture. Systems that are open and modular. That grow with users—not beyond them. That are flexible enough to adapt without constant reinvention.
+
+If I Were to Shape a TEGA 2.0
+
+It wouldn't just be a rebuild. It would be a redesign—grounded in what matters most: function, sustainability, accessibility, and thoughtful support for the people doing the work.
+
+It would be built to flex for:
+- Youth researchers conducting interviews offline
+- Translators reviewing and refining multilingual content
+- Researchers designing surveys with built-in logic and real-time visibility
+- Admins managing onboarding, issues, and workflows without friction
+- PMs tracking progress without chasing updates across tools
+- Teams and organisations investing in sustainable tech—designed to be shared, documented, and extended through open-source tooling and modular architecture
+
+A system that doesn't overwhelm, overbuild, or overpromise—just one that works, even in the messiness of real-world constraints.
+
+If there's ever to be a TEGA 2.0, I hope it's not a rebuild for its own sake—but a return to what mattered most:
+
+A system that unifies rather than fragments. That simplifies instead of over-engineering. That listens, adapts, and stays light on its feet. Built not just for scale—but with purpose and care.
+
+My Take
+
+There's more I hope to explore—and perhaps quietly build—in time. For now, I'm listening. Learning. Sitting with old lessons and new questions. Letting something take shape beneath the surface—slowly, thoughtfully.
+
+What about you? What would you do differently if you revisited a product that once held your heart?
+
+As always, if this sparked something, I'd love to hear your take—drop me a note or repost with your own reflections.
