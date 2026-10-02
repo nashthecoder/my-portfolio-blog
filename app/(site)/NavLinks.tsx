@@ -7,7 +7,6 @@ const NAV_LINKS = [
   { href: '/work',     label: 'Work'     },
   { href: '/ventures', label: 'Ventures' },
   { href: '/my-take',  label: 'My Take'  },
-  { href: '/cv',       label: 'CV'       },
 ]
 
 export default function NavLinks() {

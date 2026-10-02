@@ -119,7 +119,7 @@ export default async function HomePage() {
           </h1>
 
           {/* CTA */}
-          <a href="/cv"
+          <a href="/Naijeria_Toweett_CV_2026.pdf" download
             style={{ fontSize: '17px', padding: '0.55rem 1.25rem', borderRadius: '100px', background: 'transparent', color: C.charcoal, border: `1px solid ${C.border}`, display: 'inline-block', textDecoration: 'none', width: 'fit-content' }}>
             Download CV
           </a>

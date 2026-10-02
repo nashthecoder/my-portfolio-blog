@@ -91,7 +91,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
           <div className="footer-col">
             <p className="footer-col-label">About</p>
             <ul>
-              <li><Link href="/cv" className="footer-link">CV / Résumé</Link></li>
+              <li><a href="/Naijeria_Toweett_CV_2026.pdf" download className="footer-link">CV / Résumé</a></li>
               <li><Link href="/my-take" className="footer-link">My Take</Link></li>
             </ul>
           </div>
