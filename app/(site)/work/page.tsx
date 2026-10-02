@@ -22,12 +22,6 @@ const C = {
 }
 
 const ALL_PROJECTS = [
-  { _id:'1', title:'NairobiTalks', client:'World Bank · Nairobi County Gov', sector:'govtech',
-    summary:'Civic tech platform co-designed with citizens and officials in 1.5 days. Filterable admin dashboard, swipe-based public interface, AI chatbot for planning literacy. MIT licensed.',
-    impact_metric:'1.5 days to prototype', tags:['DPI','Co-design','Rails','World Bank'],
-    external_url:null, live_url:null,
-    delivers:['1.5 days from problem to prototype','Co-design with 4 stakeholder groups','Non-technical handover documentation','MIT open source'],
-    screenshot_url:'/images/work/nairobi-talks.png', screenshot_label:'NairobiTalks case study' },
   { _id:'2', title:'AskRafikey', client:'Digital Health Coalition of Kenya', sector:'healthtech',
     summary:"Kenya's first AI-driven SRHR chatbot. 18 verified topic areas, GPS service finder, full admin CMS for non-technical coalition staff. 5 rounds of co-design and usability testing.",
     impact_metric:'5 rounds · 20 testers', tags:['AI','SRHR','DPI','Open source','Coalition CMS'],
@@ -63,13 +57,19 @@ const ALL_PROJECTS = [
     impact_metric:'82+ leaders live', tags:['Digital Health','Women Leaders','Supabase','Open data','Coalition CMS'],
     external_url:null, live_url:'https://Transform-Health-2.github.io/Women-leaders-database/',
     delivers:['82+ verified women leaders live','Public searchable directory with analytics world map','Self-service magic-link profile management','Full admin console for coalition staff','CI/CD auto-deploy to GitHub Pages'],
-    screenshot_url:null, screenshot_label:'Women Leaders Directory — live' },
+    screenshot_url:'/images/work/women-leaders-directory.png', screenshot_label:'Women Leaders Directory landing page' },
   { _id:'8', title:'AIxD Threat Map', client:'Power for Democracies (P4Dem)', sector:'civic',
     summary:'Filterable, searchable database of AI threats and opportunities to democracy, mapped to the IDEA Democracy Assessment Framework. Built for P4D researchers to share with policymakers.',
     impact_metric:'Policymaker-ready tool', tags:['Democracy','AI','Research','Astro','Open data'],
     external_url:null, live_url:'https://www.powerfordemocracies.org/research/our-research/ai-democracy-landscape/',
     delivers:['Searchable database of AI threats & opportunities','Mapped to IDEA Democracy Assessment Framework','Built for researchers to brief policymakers','Staging + production deployment pipeline'],
-    screenshot_url:null, screenshot_label:'AIxD Threat Map — live' },
+    screenshot_url:'/images/work/aixd-threat-map.png', screenshot_label:'AIxD Threat Map landing page' },
+  { _id:'1', title:'NairobiTalks', client:'World Bank · Nairobi County Gov', sector:'govtech',
+    summary:'Civic tech platform co-designed with citizens and officials in 1.5 days. Filterable admin dashboard, swipe-based public interface, AI chatbot for planning literacy. MIT licensed.',
+    impact_metric:'1.5 days to prototype', tags:['DPI','Co-design','Rails','World Bank'],
+    external_url:null, live_url:null,
+    delivers:['1.5 days from problem to prototype','Co-design with 4 stakeholder groups','Non-technical handover documentation','MIT open source'],
+    screenshot_url:'/images/work/nairobi-talks.png', screenshot_label:'NairobiTalks case study' },
 ]
 
 const SECTOR: Record<string, { bg: string; fg: string; label: string }> = {
